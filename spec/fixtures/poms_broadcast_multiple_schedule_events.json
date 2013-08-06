@@ -1,0 +1,354 @@
+{
+    "_id": "NPS_1223852",
+    "_rev": "63-cb150c34f7f8fa18d547be5d900b0ff3",
+    "avAttributes": {
+        "audioAttributes": {
+            "numberOfChannels": 2
+        },
+        "videoAttributes": {
+            "aspectRatio": "16:9",
+            "color": "BLACK_AND_WHITE_AND_COLOR"
+        }
+    },
+    "avType": "VIDEO",
+    "broadcasters": [
+        "NPS",
+        "NTR",
+        "Zapp"
+    ],
+    "creationDate": 1367962603105,
+    "credits": [
+        {
+            "familyName": "Nienke",
+            "givenName": "",
+            "role": "PRESENTER"
+        }
+    ],
+    "crids": [
+        "crid://tmp.program.omroep.nl/15641305"
+    ],
+    "descendantOf": [
+        {
+            "midRef": "NPS_1217585",
+            "type": "SEASON",
+            "urnRef": "urn:vpro:media:group:16805225"
+        },
+        {
+            "midRef": "POMS_S_NTR_059960",
+            "type": "SERIES",
+            "urnRef": "urn:vpro:media:group:3731098"
+        }
+    ],
+    "descriptions": [
+        {
+            "owner": "WHATS_ON",
+            "type": "MAIN",
+            "value": "Nienke gaat naar Makkum in Friesland.  De Friese klei, die daar al eeuwen onder  de grond ligt, is ideaal voor het maken van aardewerk.  Nienke volgt het hele giet- en bakproces totdat er een prachtig stuk nieuw aardewerk  geboren is.  En hoe kom je te weten of het aardewerk goed gelukt is? Door heel goed te luisteren!  www.hetklokhuis.nl"
+        },
+        {
+            "owner": "MIS",
+            "type": "SHORT",
+            "value": "Nienke gaat naar Makkum in Friesland. De Friese klei die daar al eeuwen onder de grond ligt is ideaal voor het maken van aardewerk. Nienke volgt het hele giet- en bakproces."
+        },
+        {
+            "owner": "CERES",
+            "type": "SHORT",
+            "value": "Nienke gaat naar Makkum in Friesland. De Friese klei die daar al eeuwen onder de grond ligt is ideaal voor het maken van aardewerk. Nienke volgt het hele giet- en bakproces."
+        },
+        {
+            "owner": "CERES",
+            "type": "SUB",
+            "value": "De eerste reportage van onze nieuwe presentatrice Nienke! Hoe zal ze het er vanaf brengen? Nienke gaat naar Makkum in Friesland. De Friese klei die daar al eeuwen onder de grond ligt is ideaal voor het maken van aardewerk. Nienke volgt het hele giet- en bakproces totdat er een prachtig stuk nieuw aardewerk geboren is. En hoe kom je te weten of het aardewerk goed gelukt is? Door heel goed te luisteren!"
+        },
+        {
+            "owner": "MIS",
+            "type": "EPISODE",
+            "value": "De eerste reportage van onze nieuwe presentatrice Nienke! Hoe zal ze het er vanaf brengen? Nienke gaat naar Makkum in Friesland. De Friese klei die daar al eeuwen onder de grond ligt is ideaal voor het maken van aardewerk. Nienke volgt het hele giet- en bakproces totdat er een prachtig stuk nieuw aardewerk geboren is. En hoe kom je te weten of het aardewerk goed gelukt is? Door heel goed te luisteren!"
+        }
+    ],
+    "duration": 1320000,
+    "embeddable": true,
+    "episodeOf": [
+        {
+            "added": 1369773121035,
+            "highlighted": false,
+            "index": 3407,
+            "midRef": "NPS_1217585",
+            "type": "SEASON",
+            "urnRef": "urn:vpro:media:group:16805225"
+        }
+    ],
+    "genres": [
+        "Informatief",
+        "Jeugd"
+    ],
+    "images": [
+        {
+            "creationDate": 1369760403678,
+            "description": "Nienke gaat naar Makkum in Friesland. De Friese klei die daar al eeuwen onder de grond ligt is ideaal voor het maken van aardewerk. Nienke volgt het hele giet- en bakproces.",
+            "highlighted": false,
+            "imageUri": "urn:vpro:image:186997",
+            "lastModified": 1369760410677,
+            "owner": "NEBO",
+            "title": "Het Klokhuis",
+            "type": "STILL",
+            "urn": "urn:vpro:media:image:26079434",
+            "workflow": "PUBLISHED"
+        },
+        {
+            "creationDate": 1369760407265,
+            "description": "Nienke gaat naar Makkum in Friesland. De Friese klei die daar al eeuwen onder de grond ligt is ideaal voor het maken van aardewerk. Nienke volgt het hele giet- en bakproces.",
+            "highlighted": false,
+            "imageUri": "urn:vpro:image:186998",
+            "lastModified": 1369760410678,
+            "owner": "NEBO",
+            "title": "Het Klokhuis",
+            "type": "STILL",
+            "urn": "urn:vpro:media:image:26079435",
+            "workflow": "PUBLISHED"
+        },
+        {
+            "creationDate": 1369760410567,
+            "description": "Nienke gaat naar Makkum in Friesland. De Friese klei die daar al eeuwen onder de grond ligt is ideaal voor het maken van aardewerk. Nienke volgt het hele giet- en bakproces.",
+            "highlighted": false,
+            "imageUri": "urn:vpro:image:186999",
+            "lastModified": 1369760410678,
+            "owner": "NEBO",
+            "title": "Het Klokhuis",
+            "type": "STILL",
+            "urn": "urn:vpro:media:image:26079436",
+            "workflow": "PUBLISHED"
+        }
+    ],
+    "languages": [
+        "NL"
+    ],
+    "lastModified": 1369876951297,
+    "locations": [
+        {
+            "avAttributes": {
+                "avFileFormat": "HASP"
+            },
+            "creationDate": 1369760765709,
+            "lastModified": 1369760765858,
+            "owner": "CERES",
+            "programUrl": "odip+http://odi.omroep.nl/video/adaptive/NPS_1223852",
+            "type": "INTERNAL",
+            "urn": "urn:vpro:media:location:26079497",
+            "workflow": "PUBLISHED"
+        },
+        {
+            "avAttributes": {
+                "avFileFormat": "MP4",
+                "bitrate": 204800,
+                "videoAttributes": {
+                    "aspectRatio": "16:9",
+                    "videoCoding": "MP4"
+                }
+            },
+            "creationDate": 1369766645862,
+            "lastModified": 1369766645997,
+            "owner": "NEBO",
+            "programUrl": "odi+http://odi.omroep.nl/video/h264_sb/NPS_1223852",
+            "publishStart": 1369759752000,
+            "type": "EXTERNAL",
+            "urn": "urn:vpro:media:location:26080644",
+            "workflow": "PUBLISHED"
+        },
+        {
+            "avAttributes": {
+                "avFileFormat": "MP4",
+                "bitrate": 512000,
+                "videoAttributes": {
+                    "aspectRatio": "16:9",
+                    "videoCoding": "MP4"
+                }
+            },
+            "creationDate": 1369766645860,
+            "lastModified": 1369766645998,
+            "owner": "NEBO",
+            "programUrl": "odi+http://odi.omroep.nl/video/h264_bb/NPS_1223852",
+            "publishStart": 1369759752000,
+            "type": "EXTERNAL",
+            "urn": "urn:vpro:media:location:26080647",
+            "workflow": "PUBLISHED"
+        },
+        {
+            "avAttributes": {
+                "avFileFormat": "MP4",
+                "bitrate": 1024000,
+                "videoAttributes": {
+                    "aspectRatio": "16:9",
+                    "videoCoding": "MP4"
+                }
+            },
+            "creationDate": 1369766645862,
+            "lastModified": 1369766646000,
+            "owner": "NEBO",
+            "programUrl": "odi+http://odi.omroep.nl/video/h264_std/NPS_1223852",
+            "publishStart": 1369759752000,
+            "type": "EXTERNAL",
+            "urn": "urn:vpro:media:location:26080650",
+            "workflow": "PUBLISHED"
+        },
+        {
+            "avAttributes": {
+                "avFileFormat": "WVC1",
+                "bitrate": 1024000,
+                "videoAttributes": {
+                    "aspectRatio": "16:9",
+                    "videoCoding": "MP4"
+                }
+            },
+            "creationDate": 1369766645861,
+            "lastModified": 1369766646002,
+            "owner": "NEBO",
+            "programUrl": "odi+http://odi.omroep.nl/video/wvc1_std/NPS_1223852",
+            "publishStart": 1369759752000,
+            "type": "EXTERNAL",
+            "urn": "urn:vpro:media:location:26080653",
+            "workflow": "PUBLISHED"
+        },
+        {
+            "avAttributes": {
+                "avFileFormat": "WM",
+                "bitrate": 204800,
+                "videoAttributes": {
+                    "aspectRatio": "16:9",
+                    "videoCoding": "MP4"
+                }
+            },
+            "creationDate": 1369766645861,
+            "lastModified": 1369766646003,
+            "owner": "NEBO",
+            "programUrl": "odi+http://odi.omroep.nl/video/wmv_sb/NPS_1223852",
+            "publishStart": 1369759752000,
+            "type": "EXTERNAL",
+            "urn": "urn:vpro:media:location:26080656",
+            "workflow": "PUBLISHED"
+        },
+        {
+            "avAttributes": {
+                "avFileFormat": "WM",
+                "bitrate": 512000,
+                "videoAttributes": {
+                    "aspectRatio": "16:9",
+                    "videoCoding": "MP4"
+                }
+            },
+            "creationDate": 1369766645861,
+            "lastModified": 1369766646005,
+            "owner": "NEBO",
+            "programUrl": "odi+http://odi.omroep.nl/video/wmv_bb/NPS_1223852",
+            "publishStart": 1369759752000,
+            "type": "EXTERNAL",
+            "urn": "urn:vpro:media:location:26080659",
+            "workflow": "PUBLISHED"
+        }
+    ],
+    "mid": "NPS_1223852",
+    "poProgID": "NPS_1223852",
+    "poSeriesID": "NPS_1217585",
+    "predictions": [
+        "INTERNETVOD"
+    ],
+    "scheduleEvents": [
+        {
+            "channel": "NED3",
+            "duration": 897000,
+            "midRef": "NPS_1223852",
+            "poProgID": "NPS_1223852",
+            "poSeriesID": "NPS_1217585",
+            "start": 1369758445000,
+            "urnRef": "urn:vpro:media:program:25215274"
+        },
+        {
+            "avAttributes": {
+                "videoAttributes": {
+                    "aspectRatio": "16:9"
+                }
+            },
+            "channel": "BVNT",
+            "duration": 900000,
+            "imi": "imi:20927",
+            "midRef": "NPS_1223852",
+            "poProgID": "NPS_1223852",
+            "poSeriesID": "NPS_1217585",
+            "repeat": {
+                "isRerun": true,
+                "value": ""
+            },
+            "start": 1370356500000,
+            "textSubtitles": "Teletekst ondertitels",
+            "urnRef": "urn:vpro:media:program:25215274"
+        },
+        {
+            "avAttributes": {
+                "videoAttributes": {
+                    "aspectRatio": "16:9"
+                }
+            },
+            "channel": "BVNT",
+            "duration": 900000,
+            "imi": "imi:20954",
+            "midRef": "NPS_1223852",
+            "poProgID": "NPS_1223852",
+            "poSeriesID": "NPS_1217585",
+            "repeat": {
+                "isRerun": true,
+                "value": ""
+            },
+            "start": 1370399700000,
+            "textSubtitles": "Teletekst ondertitels",
+            "urnRef": "urn:vpro:media:program:25215274"
+        }
+    ],
+    "segments": [],
+    "sortDate": 1369758445000,
+    "teletext": 226,
+    "titles": [
+        {
+            "owner": "NEBO",
+            "type": "MAIN",
+            "value": "Het Klokhuis"
+        },
+        {
+            "owner": "MIS",
+            "type": "MAIN",
+            "value": "Het Klokhuis"
+        },
+        {
+            "owner": "CERES",
+            "type": "MAIN",
+            "value": "Het Klokhuis"
+        },
+        {
+            "owner": "WHATS_ON",
+            "type": "MAIN",
+            "value": "Aardewerk"
+        },
+        {
+            "owner": "WHATS_ON",
+            "type": "ORIGINAL",
+            "value": "AARDEWERK"
+        },
+        {
+            "owner": "MIS",
+            "type": "EPISODE",
+            "value": "Aardewerk"
+        },
+        {
+            "owner": "CERES",
+            "type": "EPISODE",
+            "value": "Aardewerk"
+        }
+    ],
+    "type": "BROADCAST",
+    "urn": "urn:vpro:media:program:25215274",
+    "websites": [
+        {
+            "value": "www.hetklokhuis.nl"
+        }
+    ],
+    "workflow": "PUBLISHED"
+}

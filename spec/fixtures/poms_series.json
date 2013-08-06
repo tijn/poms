@@ -1,0 +1,49 @@
+{
+    "_id": "POMS_S_KRO_059857",
+    "_rev": "114-ec0bb9ea2d536d14829c17738ee4829b",
+    "avType": "VIDEO",
+    "broadcasters": [
+        "KRO",
+        "Zapp"
+    ],
+    "creationDate": 1287423043260,
+    "credits": [],
+    "crids": [
+        "crid://nebo.masterserie.omroep.nl/6075"
+    ],
+    "descendantOf": [],
+    "descriptions": [
+        {
+            "owner": "NEBO",
+            "type": "MAIN",
+            "value": "Dramaserie over liefde, kattenkwaad en avontuur."
+        }
+    ],
+    "embeddable": true,
+    "genres": [
+        "Jeugd",
+        "Kinderen 6-12"
+    ],
+    "images": [],
+    "isOrdered": true,
+    "lastModified": 1363066672185,
+    "locations": [],
+    "mid": "POMS_S_KRO_059857",
+    "scheduleEvents": [],
+    "sortDate": 1375541968726,
+    "titles": [
+        {
+            "owner": "NEBO",
+            "type": "MAIN",
+            "value": "Vrijland"
+        }
+    ],
+    "type": "SERIES",
+    "urn": "urn:vpro:media:group:5346131",
+    "websites": [
+        {
+            "value": "http://www.kro.nl/vrijland"
+        }
+    ],
+    "workflow": "PUBLISHED"
+}

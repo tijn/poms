@@ -1,0 +1,180 @@
+{
+    "_id": "POW_00107982",
+    "_rev": "50-55d005b84d208f6d283c4399785eb28c",
+    "avAttributes": {
+        "audioAttributes": {
+            "numberOfChannels": 2
+        },
+        "videoAttributes": {
+            "color": "BLACK_AND_WHITE_AND_COLOR"
+        }
+    },
+    "avType": "VIDEO",
+    "broadcasters": [
+        "AVRO"
+    ],
+    "countries": [
+        "SE"
+    ],
+    "creationDate": 1372999498816,
+    "credits": [],
+    "descendantOf": [
+        {
+            "midRef": "POW_00107959",
+            "type": "SEASON",
+            "urnRef": "urn:vpro:media:group:15067602"
+        }
+    ],
+    "descriptions": [
+        {
+            "owner": "MIS",
+            "type": "MAIN",
+            "value": "Jeugdserie over Pippi, een stoere meid die allerlei spannende avonturen beleeft, samen met haar beste vrienden Tommy en Annika."
+        },
+        {
+            "owner": "WHATS_ON",
+            "type": "MAIN",
+            "value": "Zweedse serie over Pippi, een stoere meid die allerlei spannende avonturen beleeft, samen met haar beste vrienden Tommy en Annika."
+        }
+    ],
+    "duration": 1200000,
+    "embeddable": true,
+    "episodeOf": [
+        {
+            "added": 1372999498928,
+            "highlighted": false,
+            "index": 21,
+            "midRef": "POW_00107959",
+            "type": "SEASON",
+            "urnRef": "urn:vpro:media:group:15067602"
+        }
+    ],
+    "genres": [
+        "Jeugd",
+        "Serie/soap"
+    ],
+    "hasSubtitles": true,
+    "images": [],
+    "lastModified": 1375303423988,
+    "locations": [],
+    "mid": "POW_00107982",
+    "poProgID": "POW_00107982",
+    "poSeriesID": "POW_00107959",
+    "scheduleEvents": [
+        {
+            "channel": "NED3",
+            "duration": 1249000,
+            "midRef": "POW_00107982",
+            "poProgID": "POW_00107982",
+            "poSeriesID": "POW_00107959",
+            "start": 1248444059000,
+            "urnRef": "urn:vpro:media:program:27387984"
+        },
+        {
+            "channel": "NED3",
+            "duration": 1249000,
+            "midRef": "POW_00107982",
+            "poProgID": "POW_00107982",
+            "poSeriesID": "POW_00107959",
+            "start": 1251467812000,
+            "urnRef": "urn:vpro:media:program:27387984"
+        },
+        {
+            "channel": "NED3",
+            "duration": 1217000,
+            "midRef": "POW_00107982",
+            "poProgID": "POW_00107982",
+            "poSeriesID": "POW_00107959",
+            "start": 1281103993000,
+            "urnRef": "urn:vpro:media:program:27387984"
+        },
+        {
+            "channel": "NED3",
+            "duration": 1217000,
+            "midRef": "POW_00107982",
+            "poProgID": "POW_00107982",
+            "poSeriesID": "POW_00107959",
+            "start": 1311001962000,
+            "urnRef": "urn:vpro:media:program:27387984"
+        },
+        {
+            "channel": "NED3",
+            "duration": 1217000,
+            "midRef": "POW_00107982",
+            "poProgID": "POW_00107982",
+            "poSeriesID": "POW_00107959",
+            "start": 1313586251000,
+            "urnRef": "urn:vpro:media:program:27387984"
+        },
+        {
+            "channel": "NED3",
+            "duration": 1217000,
+            "midRef": "POW_00107982",
+            "poProgID": "POW_00107982",
+            "poSeriesID": "POW_00107959",
+            "start": 1341491500000,
+            "urnRef": "urn:vpro:media:program:27387984"
+        },
+        {
+            "channel": "NED3",
+            "duration": 1217000,
+            "midRef": "POW_00107982",
+            "poProgID": "POW_00107982",
+            "poSeriesID": "POW_00107959",
+            "start": 1341988683000,
+            "urnRef": "urn:vpro:media:program:27387984"
+        },
+        {
+            "channel": "NED3",
+            "duration": 1217000,
+            "midRef": "POW_00107982",
+            "poProgID": "POW_00107982",
+            "poSeriesID": "POW_00107959",
+            "start": 1344407956000,
+            "urnRef": "urn:vpro:media:program:27387984"
+        },
+        {
+            "channel": "NED3",
+            "duration": 1217000,
+            "midRef": "POW_00107982",
+            "poProgID": "POW_00107982",
+            "poSeriesID": "POW_00107959",
+            "start": 1344514983000,
+            "urnRef": "urn:vpro:media:program:27387984"
+        },
+        {
+            "channel": "NED3",
+            "duration": 1200000,
+            "imi": "imi:31144",
+            "memberOf": "crid://bds.tv/17410479",
+            "midRef": "POW_00107982",
+            "offset": -79000,
+            "poProgID": "POW_00107982",
+            "poSeriesID": "POW_00107959",
+            "start": 1375104900000,
+            "urnRef": "urn:vpro:media:program:27387984"
+        }
+    ],
+    "segments": [],
+    "sortDate": 1248444059000,
+    "titles": [
+        {
+            "owner": "MIS",
+            "type": "MAIN",
+            "value": "Pippi Langkous klassiek"
+        },
+        {
+            "owner": "WHATS_ON",
+            "type": "MAIN",
+            "value": "Pippi neemt afscheid"
+        },
+        {
+            "owner": "MIS",
+            "type": "EPISODE",
+            "value": "Pippi neemt afscheid"
+        }
+    ],
+    "type": "BROADCAST",
+    "urn": "urn:vpro:media:program:27387984",
+    "workflow": "PUBLISHED"
+}
