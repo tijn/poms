@@ -22,6 +22,7 @@ module Poms
         series.first
       end
       def serie_mid
+        return nil if serie.nil?
         serie.mid_ref || serie.mid
       end
     end
