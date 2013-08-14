@@ -26,7 +26,7 @@ module Poms
     end
 
     def available_streams
-      return nil if locations.nil? or locations.empty?
+      return [] if locations.nil? or locations.empty?
       streams = locations.map do |l|
         l.program_url.match(/^[\w+]+\:\/\/[\w\.]+\/video\/(\w+)\/\w+/)[1] 
       end
