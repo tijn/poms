@@ -42,7 +42,7 @@ module Poms
         when String, Integer
 
           case k
-          when "start", "end"
+          when "start", "end", "sort_date"
             @hash.send("[]=", k, Time.at(v/1000))
           end
         when NilClass, FalseClass, TrueClass, Time, Poms::Typeless
