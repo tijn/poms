@@ -25,9 +25,10 @@ module Poms
       serie.try :mid_ref || serie.mid
     end
 
-    def available_streams
+    def odi_streams
       return [] if locations.nil? or locations.empty?
-      streams = locations.map do |l|
+      odi_streams = locations.select{|l| l.program_url.match(/^odi/)}
+      streams = odi_streams.map do |l|
         l.program_url.match(/^[\w+]+\:\/\/[\w\.]+\/video\/(\w+)\/\w+/)[1] 
       end
       streams.uniq

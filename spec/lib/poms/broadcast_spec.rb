@@ -30,7 +30,7 @@ describe Poms::Broadcast do
   end
 
   it 'can return the available streams' do 
-    poms_broadcast.available_streams.should eq(["adaptive", "h264_sb", "h264_bb", "h264_std", "wvc1_std", "wmv_sb", "wmv_bb"])
+    poms_broadcast.odi_streams.should eq(["adaptive", "h264_sb", "h264_bb", "h264_std", "wvc1_std", "wmv_sb", "wmv_bb"])
   end
 
 end
