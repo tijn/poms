@@ -9,13 +9,12 @@ module Poms
         return @series if @series
         descendant_series = descendant_of.reject {|obj| obj.class != Poms::Series }
         if descendant_of.blank?
-          @series = []
+          []
         elsif descendant_series.blank?
-          @series = descendant_of
+          descendant_of
         else
-          @series = descendant_series 
+          descendant_series 
         end
-        @series
       end   
 
       def serie 
