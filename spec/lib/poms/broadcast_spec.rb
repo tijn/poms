@@ -29,8 +29,12 @@ describe Poms::Broadcast do
     poms_pippi_langkous.serie_mid.should eq('POW_00107959')
   end
 
-  it 'can return the available streams' do 
+  it 'returns the available streams' do 
     poms_broadcast.odi_streams.should eq(["adaptive", "h264_sb", "h264_bb", "h264_std", "wvc1_std", "wmv_sb", "wmv_bb"])
   end
 
+  it 'return the ancestors of the broadcast' do
+    # I use to_set as the order does not matter
+    poms_broadcast.ancestor_mids.to_set.should eq(['POMS_S_KRO_059857', 'KRO_1521173'].to_set)
+  end
 end

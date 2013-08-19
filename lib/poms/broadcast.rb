@@ -1,10 +1,10 @@
-require 'poms/has_descendants'
+require 'poms/has_ancestors'
 require 'poms/has_base_attributes'
 
 module Poms
   class Broadcast < Poms::Builder::NestedOpenStruct
     
-    include Poms::HasDescendants
+    include Poms::HasAncestors
     include Poms::HasBaseAttributes
 
     def initialize hash
@@ -32,6 +32,12 @@ module Poms
         l.program_url.match(/^[\w+]+\:\/\/[\w\.]+\/video\/(\w+)\/\w+/)[1] 
       end
       streams.uniq
+    end
+    def ancestor_mids
+      return @ancestor_mids if @ancestor_mids
+      descendant_of_mids = descendant_of.map(&:mid_ref) rescue []
+      episode_of_mids = episode_of.map(&:mid_ref) rescue  []
+      @ancestor_mids = (descendant_of_mids + episode_of_mids).uniq
     end
 
   end

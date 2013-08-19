@@ -1,5 +1,5 @@
 module Poms
-  module HasDescendants
+  module HasAncestors
     module ClassMethods
       
     end
