@@ -30,12 +30,12 @@ module Poms
     get_json(uri)
   end
 
-  def self.upcomming_broadcasts zender, start_time = Time.now, end_time = Time.now+7.days
-    hash = upcomming_broadcasts_raw_json(zender, start_time, end_time)
+  def self.upcoming_broadcasts zender, start_time = Time.now, end_time = Time.now+7.days
+    hash = upcoming_broadcasts_raw_json(zender, start_time, end_time)
     hash['rows'].map {|item| Poms::Builder.process_hash item['doc']}
   end
 
-  def self.upcomming_broadcasts_raw_json zender, start_time=Time.now, end_time=Time.now+7.days
+  def self.upcoming_broadcasts_raw_json zender, start_time=Time.now, end_time=Time.now+7.days
     uri = [BROADCASTS_VIEW_PATH, broadcast_view_params(zender, start_time, end_time )].join
     get_json(uri)
   end

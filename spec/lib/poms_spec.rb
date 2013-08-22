@@ -33,12 +33,12 @@ describe Poms do
     end
 
     it "fetches all broadcast by zapp" do
-      Poms.upcomming_broadcasts_raw_json('zapp', start_time, end_time).should eq(JSON.parse response)
+      Poms.upcoming_broadcasts_raw_json('zapp', start_time, end_time).should eq(JSON.parse response)
     end
 
     it "fetches all broadcast by zapp and parses it correctly" do
       Poms::Builder.should_receive(:process_hash).exactly(136).times
-      Poms.upcomming_broadcasts('zapp', start_time, end_time)
+      Poms.upcoming_broadcasts('zapp', start_time, end_time)
     end
 
   end
