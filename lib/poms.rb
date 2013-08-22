@@ -1,6 +1,7 @@
 require 'active_support'
 require 'open-uri'
 require 'json'
+require 'poms/base'
 require 'poms/version'
 require 'poms/builder'
 require 'poms/schedule_event'

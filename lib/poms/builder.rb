@@ -20,6 +20,9 @@ module Poms
 
 
     class NestedOpenStruct < OpenStruct
+
+      include Poms::Base
+
       def initialize(hash)
         @hash = hash
         @hash.each do |k,v|

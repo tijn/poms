@@ -24,6 +24,13 @@ module Poms
         return nil if serie.nil?
         serie.mid_ref || serie.mid
       end
+      def ancestor_mids
+        return @ancestor_mids if @ancestor_mids
+        descendant_of_mids = descendant_of.map(&:mid_ref) rescue []
+        episode_of_mids = episode_of.map(&:mid_ref) rescue  []
+        @ancestor_mids = (descendant_of_mids + episode_of_mids).flatten.compact.uniq
+      end
+
     end
     
     def self.included(receiver)
