@@ -1,12 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
-
-require 'poms' # and any other gems you need
 require 'fakeweb'
 require 'fabrication'
+require 'poms' # and any other gems you need
 
-RSpec.configure do |config|
-  # some (optional) config here
-  
-
-end
+FakeWeb.allow_net_connect = false

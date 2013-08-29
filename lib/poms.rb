@@ -41,7 +41,7 @@ module Poms
   end
 
   def self.fetch_broadcasts_for_serie mid
-    hash = self.fetch_broadcasts_for_serie_raw_json mid
+    hash = self.fetch_broadcasts_for_serie_raw_json(mid) || {'rows' => []}
     hash['rows'].map {|item| Poms::Builder.process_hash item['doc']}
   end
 
@@ -71,7 +71,12 @@ module Poms
   end
 
   def self.get_json uri
-    JSON.parse(open(URI.escape [URL, uri].join).read)
+    begin
+      JSON.parse(open(URI.escape [URL, uri].join).read)
+    rescue OpenURI::HTTPError => e
+      raise e unless e.message.match(/404/)
+      nil
+    end
   end
 
 

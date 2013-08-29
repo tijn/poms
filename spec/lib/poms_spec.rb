@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe Poms do
   
-  describe 'fetch a broadcast' do
+  describe '#fetch' do
     
-    let(:response) { File.read 'spec/fixtures/poms_broadcast.json' }
-
+    let(:response)  { File.read 'spec/fixtures/poms_broadcast.json' }
+  
     before do
       FakeWeb.register_uri(:get, "http://docs.poms.omroep.nl/media/KRO_1614405", :body => response)
     end
@@ -19,10 +19,23 @@ describe Poms do
       Poms.fetch('KRO_1614405')
     end
 
+
+    it 'return nil when a broadcast does not exits' do
+      FakeWeb.register_uri(:get, "http://docs.poms.omroep.nl/media/BLA", :status => [404, "Not Found"])
+      Poms.fetch('BLA').should eq(nil)
+    end
+
+  end
+
+  describe '#fetch_broadcasts_for_serie' do
+    it 'return nil when a broadcast does not exits' do
+      FakeWeb.register_uri(:get, "http://docs.poms.omroep.nl/media/_design/media/_view/by-ancestor-and-type?reduce=false&key=[%22BLA%22,%22BROADCAST%22]&include_docs=true", :status => [404, "Not Found"])
+      Poms.fetch_broadcasts_for_serie('BLA').should eq([])
+    end    
   end
   
 
-  describe 'fetch all zapp broadcasts' do
+  describe '#upcoming_broadcasts' do
     let(:response)    { File.read 'spec/fixtures/poms_zapp.json' }
     let(:start_time)  { Time.parse '2013-05-28 17:32:10 +0200' }
     let(:end_time)    { Time.parse '2013-06-11 17:32:50 +0200' }
@@ -42,6 +55,8 @@ describe Poms do
     end
 
   end
+
+  describe ''
 
 end
 

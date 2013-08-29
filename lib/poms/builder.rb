@@ -4,6 +4,7 @@ require 'active_support/all'
 module Poms
   class Builder
     def self.process_hash(hash)
+      return unless hash
       underscored_hash = {}
       hash.each {|k,v| underscored_hash[k.underscore] = v}
       class_name = (underscored_hash['type'] || "Typeless").capitalize
