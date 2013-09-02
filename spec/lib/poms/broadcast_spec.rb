@@ -11,7 +11,7 @@ describe Poms::Broadcast do
   end
 
   it 'correctly sets the title' do
-    poms_broadcast.title.should eq('VRijland')
+    poms_broadcast.title.should eq('VRijland afl.64 & 65 (herhaling)')
   end
 
   it 'correctly sets the description' do
