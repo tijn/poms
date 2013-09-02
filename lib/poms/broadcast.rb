@@ -35,5 +35,9 @@ module Poms
     end
 
   end
+  
+  class Strand < Broadcast
+  end
+  
 end
   
