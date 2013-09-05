@@ -54,6 +54,13 @@ module Poms
   alias_method :fetch_broadcasts_for_serie, :fetch_descendants_for_serie
   alias_method :fetch_broadcasts_for_serie_raw_json, :fetch_descendants_for_serie_raw_json
 
+  def fetch_descendant_mids(mid, type='BROADCAST')
+    uri = [ANCESTOR_AND_TYPE_PATH, ancestor_view_params(mid, type), "&include_docs=false"].join
+    hash = get_json(uri) || {'rows' => []}
+    hash['rows'].map {|item| item['id']}
+  end
+
+
   def fetch_broadcasts_by_channel_and_start(channel, start_time=1.week.ago, end_time=Time.now)
     uri = [CHANNEL_AND_START_PATH, channel_params(channel, start_time, end_time) ].join
     hash = get_json(uri)
