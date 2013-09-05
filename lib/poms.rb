@@ -15,6 +15,7 @@ module Poms
   MEDIA_PATH = '/media/'
   BROADCASTS_VIEW_PATH = '/media/_design/media/_view/broadcasts-by-broadcaster-and-start'
   ANCESTOR_AND_TYPE_PATH = '/media/_design/media/_view/by-ancestor-and-type'
+  ANCESTOR_AND_SORTDATE_PATH = '/media/_design/media/_view/by-ancestor-and-sortdate'
   CHANNEL_AND_START_PATH = '/media/_design/media/_view/broadcasts-by-channel-and-start'
   VALID_CHANNELS = /^NED(1|3)$/
   #  ?startkey=[\"Zapp\",1369755130000]&endkey=[\"Zapp\",1370964770000]&reduce=false&include_docs=true
@@ -31,31 +32,27 @@ module Poms
   end
 
   def upcoming_broadcasts(zender, start_time = Time.now, end_time = Time.now+7.days)
-    hash = upcoming_broadcasts_raw_json(zender, start_time, end_time)
+    uri = [BROADCASTS_VIEW_PATH, broadcast_view_params(zender, start_time, end_time )].join
+    hash = get_json(uri)
     hash['rows'].map {|item| Poms::Builder.process_hash item['doc']}
   end
-
-  def upcoming_broadcasts_raw_json(zender, start_time=Time.now, end_time=Time.now+7.days)
-    uri = [BROADCASTS_VIEW_PATH, broadcast_view_params(zender, start_time, end_time )].join
-    get_json(uri)
-  end
-  
 
   def fetch_descendants_for_serie(mid, type='BROADCAST')
-    hash = fetch_descendants_for_serie_raw_json(mid, type) || {'rows' => []}
+    uri = [ANCESTOR_AND_TYPE_PATH, ancestor_type_params(mid, type) ].join
+    hash = get_json(uri) || {'rows' => []}
     hash['rows'].map {|item| Poms::Builder.process_hash item['doc']}
   end
-
-  def fetch_descendants_for_serie_raw_json(mid, type='BROADCAST')
-    uri = [ANCESTOR_AND_TYPE_PATH, ancestor_view_params(mid, type) ].join
-    get_json(uri)
-  end 
+  
+  def fetch_descendants_by_date_for_serie(mid, start_time=1.week.ago)
+    uri = [ANCESTOR_AND_SORTDATE_PATH, ancestor_sortdate_params(mid, start_time) ].join
+    hash = get_json(uri) || {'rows' => []}
+    hash['rows'].map {|item| Poms::Builder.process_hash item['doc']}
+  end
   
   alias_method :fetch_broadcasts_for_serie, :fetch_descendants_for_serie
-  alias_method :fetch_broadcasts_for_serie_raw_json, :fetch_descendants_for_serie_raw_json
 
   def fetch_descendant_mids(mid, type='BROADCAST')
-    uri = [ANCESTOR_AND_TYPE_PATH, ancestor_view_params(mid, type), "&include_docs=false"].join
+    uri = [ANCESTOR_AND_TYPE_PATH, ancestor_type_params(mid, type), "&include_docs=false"].join
     hash = get_json(uri) || {'rows' => []}
     hash['rows'].map {|item| item['id']}
   end
@@ -73,9 +70,16 @@ module Poms
     "?startkey=[\"#{zender}\",#{start_time.to_i * 1000}]&endkey=[\"#{zender}\",#{end_time.to_i * 1000}]&reduce=false&include_docs=true"
   end
 
-  def ancestor_view_params(mid, type)
+  def ancestor_type_params(mid, type)
     "?reduce=false&key=[\"#{mid}\",\"#{type}\"]&include_docs=true"
   end
+
+  def ancestor_sortdate_params(mid, start_time=1.month.ago)
+    end_time_i    = 1.week.from_now.to_i * 1000
+    start_time_i  = start_time.to_i * 1000
+    "?reduce=false&startkey=[\"#{mid}\",#{start_time_i}]&endkey=[\"#{mid}\",#{end_time_i}]&include_docs=true"
+  end
+
 
   def channel_params(channel, start_time, end_time)
     "?startkey=[\"#{channel}\",#{start_time.to_i * 1000}]&endkey=[\"#{channel}\",#{end_time.to_i * 1000}]&reduce=false&include_docs=true"
