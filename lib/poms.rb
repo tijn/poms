@@ -64,6 +64,12 @@ module Poms
     hash['rows'].map {|item| Poms::Builder.process_hash item['doc']}
   end
 
+  def fetch_current_broadcast(channel)
+    uri = [CHANNEL_AND_START_PATH, channel_params(channel, Time.now, 1.day.ago), '&descending=true&limit=1' ].join
+    hash = get_json(uri)
+    Poms::Builder.process_hash(hash['rows'].first['doc'])
+  end
+  
   # private
   def broadcast_view_params(zender, start_time, end_time)
     zender = zender.capitalize
