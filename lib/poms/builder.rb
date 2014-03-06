@@ -4,6 +4,7 @@ require 'active_support/all'
 module Poms
   class Builder
     def self.process_hash(hash)
+      return unless hash
       underscored_hash = {}
       hash.each {|k,v| underscored_hash[k.underscore] = v}
       class_name = (underscored_hash['type'] || "Typeless").capitalize
@@ -20,6 +21,9 @@ module Poms
 
 
     class NestedOpenStruct < OpenStruct
+
+      include Poms::Base
+
       def initialize(hash)
         @hash = hash
         @hash.each do |k,v|
