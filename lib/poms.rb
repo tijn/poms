@@ -42,9 +42,9 @@ module Poms
     hash = get_json(uri) || {'rows' => []}
     hash['rows'].map {|item| Poms::Builder.process_hash item['doc']}
   end
-  
+
   alias_method :fetch_broadcasts_for_serie, :fetch_descendants_for_serie
-  
+
   def fetch_descendants_by_date_for_serie(mid, start_time=1.week.ago)
     uri = [ANCESTOR_AND_SORTDATE_PATH, ancestor_sortdate_params(mid, start_time) ].join
     hash = get_json(uri) || {'rows' => []}
@@ -66,9 +66,10 @@ module Poms
   def fetch_current_broadcast(channel)
     uri = [CHANNEL_AND_START_PATH, channel_params(channel, Time.now, 1.day.ago), '&descending=true&limit=1' ].join
     hash = get_json(uri)
-    Poms::Builder.process_hash(hash['rows'].first['doc'])
+    rows = hash['rows']
+    Poms::Builder.process_hash(rows.empty? ? {} : rows.first['doc'])
   end
-  
+
   # private
   def broadcast_view_params(zender, start_time, end_time)
     zender = zender.capitalize
