@@ -36,7 +36,8 @@ module Poms
 
     def available_until
       return nil if locations.nil? or locations.empty?
-      locations.map(&:publish_stop).compact.first
+      timestamp = locations.map(&:publish_stop).compact.first
+      return Time.at(timestamp/1000).to_datetime if timestamp
     end
 
   end

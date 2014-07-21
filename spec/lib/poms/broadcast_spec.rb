@@ -26,7 +26,7 @@ describe Poms::Broadcast do
   end
 
   it 'correctly sets available until' do
-    poms_broadcast.available_until.should eq(1369758599000)
+    poms_broadcast.available_until.should eq(Time.at(1369758599).to_datetime)
   end
 
   it 'sets the serie correctly when a broadcast only has a season, no series' do
