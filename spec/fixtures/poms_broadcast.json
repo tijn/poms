@@ -132,6 +132,7 @@
             "owner": "CERES",
             "programUrl": "odip+http://odi.omroep.nl/video/adaptive/KRO_1614405",
             "type": "INTERNAL",
+            "publishStop": 1369758599000,
             "urn": "urn:vpro:media:location:26079425",
             "workflow": "PUBLISHED"
         },

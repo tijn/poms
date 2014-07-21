@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Poms::Broadcast do
-  
+
   let(:poms_broadcast) { Fabricate(:poms_broadcast) }
   #pippi langkous is a peculiar case, as it has no series, just a season
   let(:poms_pippi_langkous) { Fabricate(:poms_broadcast_pippi_langkous) }
@@ -25,11 +25,15 @@ describe Poms::Broadcast do
     end
   end
 
+  it 'correctly sets available until' do
+    poms_broadcast.available_until.should eq(1369758599000)
+  end
+
   it 'sets the serie correctly when a broadcast only has a season, no series' do
     poms_pippi_langkous.serie_mid.should eq('POW_00107959')
   end
 
-  it 'returns the available streams' do 
+  it 'returns the available streams' do
     poms_broadcast.odi_streams.should eq(["adaptive", "h264_sb", "h264_bb", "h264_std", "wvc1_std", "wmv_sb", "wmv_bb"])
   end
 
