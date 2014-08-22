@@ -70,6 +70,13 @@ module Poms
     Poms::Builder.process_hash(rows.empty? ? {} : rows.first['doc'])
   end
 
+  def fetch_next_broadcast(channel)
+    uri = [CHANNEL_AND_START_PATH, channel_params(channel, Time.now, 1.day.from_now), '&limit=1' ].join
+    hash = get_json(uri)
+    rows = hash['rows']
+    Poms::Builder.process_hash(rows.empty? ? {} : rows.first['doc'])
+  end
+
   # private
   def broadcast_view_params(zender, start_time, end_time)
     zender = zender.capitalize
