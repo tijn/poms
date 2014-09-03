@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Poms::Builder do
 
   let(:poms_broadcast) { Fabricate(:poms_broadcast) }
-  
+
   it 'correctly sets the class of a POMS broadcast hash' do
     poms_broadcast.class.should eq(Poms::Broadcast)
   end

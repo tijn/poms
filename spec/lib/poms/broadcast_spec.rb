@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Poms::Broadcast do
 
   let(:poms_broadcast) { Fabricate(:poms_broadcast) }
-  #pippi langkous is a peculiar case, as it has no series, just a season
+  # pippi langkous is a peculiar case, as it has no series, just a season
   let(:poms_pippi_langkous) { Fabricate(:poms_broadcast_pippi_langkous) }
 
   it 'correctly sets the series' do
