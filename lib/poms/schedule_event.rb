@@ -24,7 +24,11 @@ module Poms
     end
 
     def set_ends_at
-      @hash['ends_at'] = @hash[:starts_at] + (@hash[:duration].to_i / 1000).seconds
+      @hash['ends_at'] = @hash[:starts_at] + duration
+    end
+
+    def duration
+      (@hash[:duration].to_i / 1000).seconds
     end
 
   end
