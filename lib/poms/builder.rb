@@ -6,7 +6,7 @@ module Poms
     def self.process_hash(hash)
       return unless hash
       underscored_hash = {}
-      hash.each {|k,v| underscored_hash[k.underscore] = v}
+      hash.each { |k,v| underscored_hash[k.underscore] = v }
       class_name = (underscored_hash['type'] || "Typeless").capitalize
       begin
         klass = Poms.const_get class_name
@@ -33,8 +33,8 @@ module Poms
       end
 
       private
-    
-      def process_key_value(k,v)
+
+      def process_key_value(k, v)
         case v
         when Array
           struct_array = v.map do |element|
@@ -47,7 +47,7 @@ module Poms
 
           case k
           when "start", "end", "sort_date"
-            @hash.send("[]=", k, Time.at(v/1000))
+            @hash.send("[]=", k, Time.at(v / 1000))
           end
         when NilClass, FalseClass, TrueClass, Time, Poms::Typeless
           # do nothing
@@ -68,8 +68,11 @@ module Poms
       end
     end
   end
+
+
   module Exceptions
     class UnkownStructure < StandardError
     end
   end
+
 end
