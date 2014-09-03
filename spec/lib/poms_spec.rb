@@ -19,14 +19,14 @@ describe Poms do
       Poms.fetch('KRO_1614405')
     end
 
-    it 'return nil when a broadcast does not exits' do
+    it 'returns nil when a broadcast does not exits' do
       FakeWeb.register_uri(:get, "http://docs.poms.omroep.nl/media/BLA", :status => [404, "Not Found"])
       Poms.fetch('BLA').should eq(nil)
     end
   end
 
   describe '#fetch_broadcasts_for_serie' do
-    it 'return nil when a broadcast does not exits' do
+    it 'returns nil when a broadcast does not exits' do
       FakeWeb.register_uri(:get, "http://docs.poms.omroep.nl/media/_design/media/_view/by-ancestor-and-type?reduce=false&key=[%22BLA%22,%22BROADCAST%22]&include_docs=true", :status => [404, "Not Found"])
       Poms.fetch_broadcasts_for_serie('BLA').should eq([])
     end
